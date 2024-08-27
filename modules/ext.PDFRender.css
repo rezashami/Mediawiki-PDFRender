@@ -1,0 +1,57 @@
+.pdf-carousel {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {    
+    cursor: pointer;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+    text-align: center;
+    z-index: 10;
+}
+.loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.pdf-carousel-container.loaded .loading-spinner {
+    display: none;
+}
+.pdf-carousel-container:not(.loaded) .pdf-carousel {
+    visibility: hidden;
+}

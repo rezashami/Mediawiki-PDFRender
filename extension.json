@@ -1,0 +1,32 @@
+{
+    "name": "PDFRender",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "author": "Reza Shami Tanha",
+    "description": "An extension to render PDF files using PDF.js in MediaWiki.",
+    "type": "parser",
+    "license-name": "GPL-2.0-or-later",
+    "AutoloadClasses": {
+        "PDFRender": "PDFRender.php"
+    },
+    "ResourceModules": {
+        "ext.PDFRender": {
+            "scripts": [
+                "extensions/PDFRender/modules/ext.PDFRender.js"
+            ] ,
+            "styles": "extensions/PDFRender/modules/ext.PDFRender.css",
+            "es6": true,
+            "dependencies": [
+                "jquery"
+            ],
+            "targets": [
+                "desktop",
+                "mobile"
+            ]
+        }
+    },
+    "Hooks": {
+        "ParserFirstCallInit": "PDFRender::onParserFirstCallInit",
+        "BeforePageDisplay": "PDFRender::onBeforePageDisplay"
+    }
+}
