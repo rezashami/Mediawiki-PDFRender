@@ -1,7 +1,7 @@
 # PDFRender: A MediaWiki extension for showing a PDF slider.
 
-## How to intall
-First navigate to the mediawiki installed folder then run this commands:
+## How to install
+First, navigate to the Mediawiki installed folder then run these commands:
 
 ```bash
   cd extensions/
@@ -11,7 +11,7 @@ First navigate to the mediawiki installed folder then run this commands:
 ## Load the extension
 Add the name of the extension to the ```LocalSettings.php ``` file. 
 
-For doing this, Please add below codes to the ```LocalSettings.php ``` :
+To do this, Please add the below codes to the ```LocalSettings.php ``` :
 
 ```PHP
     wfLoadExtension('PDFRender');
@@ -24,11 +24,11 @@ For doing this, Please add below codes to the ```LocalSettings.php ``` :
 
 ```
 ## Usage
-After installation and loding the extension, for showing the PDF file slide by slide, just use the
+After installation and loading the extension, to show the PDF file slide by slide, use the
 
- ```<pdfembed>File:given name.pdf</pdfembed>>```
+ ```<pdfembed>File:given name.pdf</pdfembed>```
 
 tag code.
 
-## Uninstal the Extension
-For uninstal the extenstion, just remove the PDFRender folder in the ```extensions/``` folder. And then remove the added codes to the ```LocalSettings.php``` file.
+## Uninstall the Extension
+To uninstall the extension, remove the PDFRender folder in the ```extensions/``` folder. Then, remove the added codes from the ```LocalSettings.php``` file.
